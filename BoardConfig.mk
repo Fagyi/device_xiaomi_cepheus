@@ -24,5 +24,10 @@ TARGET_KERNEL_CONFIG := cepheus_defconfig
 # Inherit from the proprietary version
 -include vendor/xiaomi/cepheus/BoardConfigVendor.mk
 
+# Power
+TARGET_TAP_TO_WAKE_NODE := "/dev/input/event4"
+TARGET_USES_INTERACTION_BOOST := true
+TARGET_USES_NON_LEGACY_POWERHAL := true
+
 # Sepolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
